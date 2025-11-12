@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Mejorada</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="topbar" role="banner">
+            <h1 class="brand">Hola Mundo</h1>
+            <nav class="navbar" aria-label="Navegación principal">
+                <ul id="menu-list" role="menu">
+                    <li role="none"><a role="menuitem" href="#sobre-mi">Sobre mí</a></li>
+                    <li role="none"><a role="menuitem" href="#intereses">Intereses</a></li>
+                    <li role="none"><a role="menuitem" href="#horarios">Horarios</a></li>
+                    <li role="none"><a role="menuitem" href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" class="menu-toggle" aria-controls="menu-list" aria-expanded="false"
+                aria-label="Abrir menú de navegación">☰</button>
+        </div>
+        <div id="menu-backdrop" class="menu-backdrop" hidden aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="sobre-mi">
+                <h2>Un Subtitulo Interesante</h2>
+                <img src="images/imagen.jpg" alt="Imagen de Super Mario" title="Super Mario Bros">
+                <p>Este es un párrafo de texto que describe brevemente mi primera incursión en HTML5.</p>
+                <p>Estoy aprendiendo a estructurar contenido web de forma semántica y a crear layouts modernos.</p>
+            </section>
+
+            <div class="flex-container">
+                <section id="intereses">
+                    <h3>Mis intereses principales incluyen:</h3>
+                    <ul>
+                        <li>Desarrollo Web</li>
+                        <li>Inteligencia Artificial</li>
+                        <li>Diseño Gráfico</li>
+                    </ul>
+                </section>
+
+                <section id="horarios">
+                    <h3>Mis horarios de estudio</h3>
+                    <table>
+                        <tr>
+                            <th>Día</th>
+                            <th>Hora</th>
+                            <th>Actividad</th>
+                        </tr>
+                        <tr>
+                            <td>Lunes</td>
+                            <td>6:00 PM</td>
+                            <td>Clases de Programación</td>
+                        </tr>
+                        <tr>
+                            <td>Miércoles</td>
+                            <td>6:00 PM</td>
+                            <td>Práctica de Laboratorio</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+
+            <section id="contacto">
+                <h3>Déjame tu comentario</h3>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" required>
+
+                    <label for="comentario">Comentario:</label>
+                    <textarea id="comentario" name="comentario" rows="4"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p id="info">Para más información, visita mi
+            <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">sitio web personal</a>.
+        </p>
+    </footer>
+
+    <script src="js/menu.js" defer></script>
+</body>
+
+</html>
