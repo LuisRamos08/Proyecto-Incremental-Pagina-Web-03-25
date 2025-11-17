@@ -64,7 +64,6 @@ footer a {
 /* ============================
    Menú de Navegación dentro del header
 ============================ */
-
 .navbar ul {
     list-style: none;
     display: flex;
@@ -170,7 +169,7 @@ a {
     font-weight: bold;
 }
 
-a:hover {
+footer a:hover {
     color: #005fa3;
     text-decoration: underline;
 }
@@ -428,12 +427,12 @@ button:hover {
         width: 100%;
         padding: 10px 0;
         font-size: 16px;
-        border-radius: 0;
+        border-radius: 1px;
     }
 
-    /* Ocultamos el menú por defecto y lo mostramos con animación cuando tenga .open */
     .navbar {
         display: block;
+        background-color: #0077cc;
     }
 
     .navbar.open {
