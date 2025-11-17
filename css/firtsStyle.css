@@ -1,0 +1,357 @@
+/* ============================
+    Configuración Global y Box Model
+============================ */
+* {
+    /* Hace que el padding y el borde se incluyan en el ancho y alto total del elemento. ¡Esencial! */
+    box-sizing: border-box;
+}
+
+/* ============================
+    Estilos generales
+============================ */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    /* Quitamos el margen por defecto del body */
+    background: linear-gradient(135deg, #f9f9fc, #80b4e8);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ============================
+    Estructura Semántica (Header y Footer)
+============================ */
+header,
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    color: white;
+}
+
+header {
+    background-color: #0077cc;
+}
+
+footer {
+    background-color: #333;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #80b4e8;
+    /* Un color que contraste con el fondo oscuro */
+}
+
+/* ============================
+   Menú de Navegación dentro del header
+============================ */
+.navbar {
+    background: #005fa3;
+    padding: 10px 0;
+    margin-top: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    padding: 5px 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ffd700;
+}
+
+/* ============================
+    Contenedor Principal
+============================ */
+.container {
+    width: 90%;
+    /* Ocupa el 90% del ancho disponible */
+    max-width: 1000px;
+    /* Pero nunca más de 1000px */
+    margin: 30px auto;
+    /* 30px de margen arriba/abajo y centrado horizontalmente */
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================
+    Layout con Flexbox
+============================ */
+.flex-container {
+    display: flex;
+    /* ¡Aquí empieza la magia de Flexbox! */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos */
+    align-items: flex-start;
+    /* Alinea los elementos en la parte superior */
+    gap: 30px;
+    /* Crea un espacio de 30px entre los elementos flexibles */
+    margin: 20px 0;
+}
+
+.flex-container>section {
+    flex: 1;
+    /* Permite que cada sección hija crezca y ocupe el espacio disponible por igual */
+}
+
+
+/* ============================
+    Encabezados
+============================ */
+h1 {
+    color: #fff;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+h2,
+h3 {
+    color: #444;
+    margin-top: 20px;
+    border-left: 4px solid #0077cc;
+    padding-left: 8px;
+}
+
+#info {
+    text-align: center;
+}
+
+/* ============================
+    Enlaces
+============================ */
+a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #005fa3;
+    text-decoration: underline;
+}
+
+/* ============================
+    Imagen
+============================ */
+img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    /* La imagen se ajustará al contenedor si es muy pequeña */
+    height: auto;
+}
+
+/* ============================
+    Listas
+============================ */
+.flex-container ul {
+    background: #f9f9f9;
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin: 10px auto;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.flex-container ul li {
+    padding: 6px 0;
+}
+
+/* ============================
+    Tablas
+============================ */
+table {
+    width: 100%;
+    /* Ajustamos al 100% para que ocupe el espacio de su contenedor flex */
+    border-collapse: collapse;
+    margin: 10px auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+th {
+    background: #0077cc;
+    color: white;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* ============================
+    Formulario
+============================ */
+form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0077cc;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 119, 204, 0.3);
+}
+
+button {
+    background: #0077cc;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+/* ============================
+   Responsivo general
+============================ */
+@media (max-width: 768px) {
+
+    /* 🔹 El contenedor con flexbox pasa a columna */
+    .flex-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 🔹 Ajustar títulos */
+    h2,
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    /* 🔹 Ajustar paddings */
+    .container {
+        padding: 15px;
+        justify-content: center;
+    }
+
+    /* 🔹 Imagen más pequeña en móviles */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 🔹 Tabla en móviles: scroll horizontal */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* ============================
+   Extra para pantallas muy pequeñas (menos de 480px)
+============================ */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+/* ============================
+   Menú bonito en móviles
+============================ */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+        background: #005fa3;
+        border-radius: 10px;
+        margin: 0 auto;
+        max-width: 250px;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar a {
+        display: block;
+        width: 100%;
+        padding: 12px 20px;
+        background: #0077cc;
+        color: white;
+        border-radius: 6px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background: #ffd700;
+        color: #333;
+        transform: scale(1.05);
+    }
+}
