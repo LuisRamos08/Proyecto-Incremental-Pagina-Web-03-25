@@ -11,18 +11,28 @@
 <body>
 
     <header>
-        <h1>Hola Mundo</h1>
-        <p>Mi primera incursión en el desarrollo web.</p>
+        <div class="header-inner">
+            <div class="brand">
+                <h1>Hola Mundo</h1>
+            </div>
 
-        <!-- 🔹 Menú de navegación -->
-        <nav class="navbar">
-            <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#intereses">Intereses</a></li>
-                <li><a href="#horarios">Horarios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+            <!-- Botón hamburguesa (solo móviles) -->
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- 🔹 Menú de navegación -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#sobre-mi">Sobre mí</a></li>
+                    <li><a href="#intereses">Intereses</a></li>
+                    <li><a href="#horarios">Horarios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -89,6 +99,20 @@
             <a href="https://www.wikipedia.org/" target="_blank">sitio web personal</a>.
         </p>
     </footer>
+
+    <script>
+        // Script simple para abrir/cerrar el menú hamburguesa en móviles
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbar = document.querySelector('.navbar');
+
+        if (menuToggle && navbar) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = navbar.classList.toggle('open');
+                menuToggle.classList.toggle('open', isOpen);
+                menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        }
+    </script>
 
 </body>
 
